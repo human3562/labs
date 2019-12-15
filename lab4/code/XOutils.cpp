@@ -136,7 +136,7 @@ void userTurn(XO::Game* game) {
 			break;
 		}
 		else {
-			std::cout << "Ââåäèòå ïðàâèëüíóþ êîîðäèíàòó òî÷êè!" << std::endl;
+			std::cout << "Введите правильную координату точки!" << std::endl;
 		}
 	}
 }
@@ -187,7 +187,7 @@ bool draw(XO::Game* game) {
 bool quit() {
 	char a = 0;
 	while (1) {
-		std::cout << "Åùå ðàç? (1 - äà, 2 - íåò): ";
+		std::cout << "Ещё раз? (1 - да, 2 - нет): ";
 		std::cin >> a;
 		switch (a) {
 		case '1': return false;
@@ -209,21 +209,21 @@ void restart(XO::Game* game) {
 bool updateGame(XO::Game* game) {
 	if (won(game, game->userChar)) {
 		game->status = XO::USER_WIN;
-		std::cout << "Âû âûèãðàëè!" << std::endl;
+		std::cout << "Вы выиграли!" << std::endl;
 		game->playerScore++;
 		if (quit()) return true;
 		restart(game);
 	}
 	if (won(game, game->botChar)) {
 		game->status = XO::BOT_WIN;
-		std::cout << "Âû ïðîèãðàëè!" << std::endl;
+		std::cout << "Вы проиграли!" << std::endl;
 		game->botScore++;
 		if(quit()) return true;
 		restart(game);
 	}
 	if (draw(game)) {
 		game->status = XO::NOT_WIN;
-		std::cout << "Íè÷üÿ!" << std::endl;
+		std::cout << "Ничья!" << std::endl;
 		if(quit()) return true;
 		restart(game);
 	}
