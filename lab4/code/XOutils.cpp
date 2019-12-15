@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <iostream>
 #include "XOutils.h"
 #include <ctime>
@@ -137,7 +136,7 @@ void userTurn(XO::Game* game) {
 			break;
 		}
 		else {
-			std::cout << "Ââåäèòå ïðàâèëüíóþ êîîðäèíàòó òî÷êè!" << std::endl;
+			std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã³Ã¾ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ Ã²Ã®Ã·ÃªÃ¨!" << std::endl;
 		}
 	}
 }
@@ -188,7 +187,7 @@ bool draw(XO::Game* game) {
 bool quit() {
 	char a = 0;
 	while (1) {
-		std::cout << "Åùå ðàç? (1 - äà, 2 - íåò): ";
+		std::cout << "Ã…Ã¹Ã¥ Ã°Ã Ã§? (1 - Ã¤Ã , 2 - Ã­Ã¥Ã²): ";
 		std::cin >> a;
 		switch (a) {
 		case '1': return false;
@@ -210,21 +209,21 @@ void restart(XO::Game* game) {
 bool updateGame(XO::Game* game) {
 	if (won(game, game->userChar)) {
 		game->status = XO::USER_WIN;
-		std::cout << "Âû âûèãðàëè!" << std::endl;
+		std::cout << "Ã‚Ã» Ã¢Ã»Ã¨Ã£Ã°Ã Ã«Ã¨!" << std::endl;
 		game->playerScore++;
 		if (quit()) return true;
 		restart(game);
 	}
 	if (won(game, game->botChar)) {
 		game->status = XO::BOT_WIN;
-		std::cout << "Âû ïðîèãðàëè!" << std::endl;
+		std::cout << "Ã‚Ã» Ã¯Ã°Ã®Ã¨Ã£Ã°Ã Ã«Ã¨!" << std::endl;
 		game->botScore++;
 		if(quit()) return true;
 		restart(game);
 	}
 	if (draw(game)) {
 		game->status = XO::NOT_WIN;
-		std::cout << "Íè÷üÿ!" << std::endl;
+		std::cout << "ÃÃ¨Ã·Ã¼Ã¿!" << std::endl;
 		if(quit()) return true;
 		restart(game);
 	}
