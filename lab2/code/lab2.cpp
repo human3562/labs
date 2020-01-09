@@ -5,14 +5,19 @@ using namespace std;
 
 double a, b, startX, endX, dx;
 
+bool kindaEqual(double a, double b, double eps)
+{
+	return fabs(a - b) <= ((fabs(a) < fabs(b) ? fabs(b) : fabs(a)) * eps);
+}
+
 double f(double x) {
-	if (x <= a) {
+	if (x < a || kindaEqual(x, a, 0.01)) {
 		return exp(x);
 	}
 	else if (x < b && x > a) {
 		return exp(x) + cos(x);
 	}
-	else if (x >= b) {
+	else if (x > b || kindaEqual(x, b, 0.01)) {
 		return tan(x);
 	}
 }
