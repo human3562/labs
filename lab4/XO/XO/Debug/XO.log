@@ -1,0 +1,9 @@
+﻿  XOutils.cpp
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(126): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(130): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(132): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(142): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(146): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(148): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+c:\users\viktor\source\repos\xo\xo\xoutils.cpp(180): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+  XO.vcxproj -> C:\Users\Viktor\source\repos\XO\Debug\XO.exe
