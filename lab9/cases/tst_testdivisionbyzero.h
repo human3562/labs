@@ -89,7 +89,7 @@ TEST_F(LockControllerFix, lockWorksClose){
             .Times(1)
             .WillOnce(Return(DoorStatus::CLOSE));
 
-    DoorStatus result = lockcont->unlockDoor();
+    DoorStatus result = lockcont->lockDoor();
 
     ASSERT_EQ(result, DoorStatus::CLOSE);
 }
